@@ -8,13 +8,15 @@ rotate
 y 20
 box
 0 0 0 200 100 400
-display
+save
+box.ppm
 #clear the screen, test sphere
 clear
 pop
 sphere
 0 0 0 200
-display
+save
+sphere.ppm
 clear
 #rotate 90 degrees about y to check lines
 push
@@ -24,7 +26,8 @@ rotate
 y 90
 sphere
 0 0 0 200
-display
+save
+sphere1.ppm
 clear
 #reset sphere, rotate 90 degrees about x to check lines
 pop
@@ -35,7 +38,8 @@ rotate
 x 90
 sphere
 0 0 0 200
-display
+save
+sphere2.ppm
 clear
 #reset sphere, rotate to make it look cool
 pop
@@ -48,7 +52,8 @@ rotate
 y 20
 sphere
 0 0 0 200
-display
+save
+sphere3.ppm
 #clear the screen, test torus
 clear
 pop
@@ -64,7 +69,8 @@ rotate
 y 90
 torus
 0 0 0 40 150
-display
+save
+torus.ppm
 clear
 #rotate 90 degrees about x to check lines
 pop
@@ -75,7 +81,8 @@ rotate
 x 90
 torus
 0 0 0 40 150
-display
+save
+torus1.ppm
 clear
 #rotate to make it look cool
 pop
@@ -88,4 +95,5 @@ rotate
 x 30
 torus
 0 0 0 40 150
-display
+save
+torus3.ppm

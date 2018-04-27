@@ -172,5 +172,5 @@ def parse_file( fname, edges, polygons, transform, screen, zbuffer, color ):
             if line == 'display':
                 display(screen)
             else:
-                save_extension(screen, args[0])
+                save_ppm(screen, args[0])
         c+= 1
