@@ -14,6 +14,7 @@ def scanline_convert(polygons, i, screen, zbuffer ):
     y2 = polygons[i+2][1]
     z2 = polygons[i+2][2]
 
+    # increasing y ordering 
     if (y0 > y2):
         y0, y2 = y2, y0
         x0, x2 = x2, x0
@@ -31,16 +32,15 @@ def scanline_convert(polygons, i, screen, zbuffer ):
     zf = z1
     y = y0 
     xi = x0 
-    xf = x0 
- 
-    mxi = float((x2-x0)/(y2-y0))
-    mzi = float((z2-z0)/(y2-y0))
-    
+    xf = x0     
     draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, random.randint(0,255))
 
     if y1 - y0 != 0: 
         mxf = (x1-x0)/(y1-y0)
         mzf = (z1-z0)/(y1-y0)
+
+    mxi = float((x2-x0)/(y2-y0))
+    mzi = float((z2-z0)/(y2-y0))
 
         while y < y1: 
             draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, random.randint(0,255))
