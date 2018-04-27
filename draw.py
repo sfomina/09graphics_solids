@@ -33,16 +33,17 @@ def scanline_convert(polygons, i, screen, zbuffer ):
     xi = x0 
     xf = x0 
  
-    mxi = (x2-x0)/(y2-y0)
-    mzi = (z2-z0)/(y2-y0)
-    draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, color)
+    mxi = float((x2-x0)/(y2-y0))
+    mzi = float((z2-z0)/(y2-y0))
+    
+    draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, random.randint(0,255))
 
     if y1 - y0 != 0: 
         mxf = (x1-x0)/(y1-y0)
         mzf = (z1-z0)/(y1-y0)
 
         while y < y1: 
-            draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, color)
+            draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, random.randint(0,255))
             xi += mxi
             xf += mxf
             zi += mzi
@@ -52,7 +53,7 @@ def scanline_convert(polygons, i, screen, zbuffer ):
     y = y1 
     xf = x1 
     zf = z1 
-    draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, color)
+    draw_line(xi, y, zi, xf, y, zf, screen, zbuffer, random.randint(0,255))
 
     if y2 - y1 != 0:
         mxf = (x2-x1)/(y2-y1)
